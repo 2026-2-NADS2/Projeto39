@@ -4,9 +4,9 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Projeto Integrador- KAFKA
 
-## Nome do Grupo
+## Borracharia Laranja Lima
 
 ## Integrantes: <a>Daniel Mendonça Sulato<a>, <a>Felipe Okada Coleto</a>, <a>Pedro Henrique Costa Barros Santos</a> e <a>Vitor Ordnois Henrique</a>
 
