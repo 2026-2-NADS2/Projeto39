@@ -1,0 +1,214 @@
+{
+  "info": {
+    "name": "KFKA - CRUD Acompanhamentos",
+    "description": "Collection com o CRUD completo de Acompanhamentos + 2 testes de erro.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:3000" },
+    { "key": "acompanhamento_id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "1 - Criar acompanhamento (POST)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 201 Created', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('Retorna id criado', function () {",
+              "    var json = pm.response.json();",
+              "    pm.expect(json).to.have.property('id');",
+              "    pm.collectionVariables.set('acompanhamento_id', json.id);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"aluno_id\": 1,\n  \"professor_id\": 1,\n  \"disciplina_id\": 1,\n  \"turma_id\": 1,\n  \"bimestre\": 2,\n  \"ano_letivo\": 2026,\n  \"descricao\": \"Aluno participou bem das atividades em grupo.\",\n  \"media\": 7.80,\n  \"tags\": \"participativo\",\n  \"status\": \"rascunho\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos"]
+        }
+      }
+    },
+    {
+      "name": "2 - Listar acompanhamentos (GET)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Retorna uma lista', function () {",
+              "    pm.expect(pm.response.json()).to.be.an('array');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos"]
+        }
+      }
+    },
+    {
+      "name": "3 - Buscar acompanhamento por ID (GET)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('ID confere', function () {",
+              "    pm.expect(pm.response.json().id).to.eql(parseInt(pm.collectionVariables.get('acompanhamento_id')));",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos/{{acompanhamento_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos", "{{acompanhamento_id}}"]
+        }
+      }
+    },
+    {
+      "name": "4 - Atualizar acompanhamento (PUT)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Status foi atualizado', function () {",
+              "    pm.expect(pm.response.json().status).to.eql('enviado_revisao');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"aluno_id\": 1,\n  \"professor_id\": 1,\n  \"disciplina_id\": 1,\n  \"turma_id\": 1,\n  \"bimestre\": 2,\n  \"ano_letivo\": 2026,\n  \"descricao\": \"Atualizado: enviado para revisão.\",\n  \"media\": 8.00,\n  \"tags\": \"participativo\",\n  \"status\": \"enviado_revisao\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos/{{acompanhamento_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos", "{{acompanhamento_id}}"]
+        }
+      }
+    },
+    {
+      "name": "5 - Deletar acompanhamento (DELETE)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos/{{acompanhamento_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos", "{{acompanhamento_id}}"]
+        }
+      }
+    },
+    {
+      "name": "6 - ERRO: criar sem campo obrigatorio (POST)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 400 Bad Request', function () {",
+              "    pm.response.to.have.status(400);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"descricao\": \"Faltam campos obrigatorios\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos"]
+        }
+      }
+    },
+    {
+      "name": "7 - ERRO: buscar id inexistente (GET)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404 Not Found', function () {",
+              "    pm.response.to.have.status(404);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/acompanhamentos/999999",
+          "host": ["{{base_url}}"],
+          "path": ["acompanhamentos", "999999"]
+        }
+      }
+    }
+  ]
+}
