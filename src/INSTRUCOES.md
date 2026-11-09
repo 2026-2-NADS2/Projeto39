@@ -17,21 +17,6 @@ Foram criados inicializadores nativos de **duplo clique** para cada sistema oper
 ### 🪟 No Windows (Duplo Clique no Explorer)
 - Dê duplo clique no arquivo [`Iniciar_EduLL-Kfka_Windows.bat`](./Iniciar_EduLL-Kfka_Windows.bat).
 
-### 🐧 No Linux
-- Execute [`./Iniciar_EduLL-Kfka_Linux.sh`](./Iniciar_EduLL-Kfka_Linux.sh).
-
-### 💻 Inicializador Universal via Terminal (Qualquer SO)
-```bash
-npm run desktop
-# ou diretamente:
-node iniciar-desktop.js
-```
-
-### 🐳 Via Docker Desktop (Windows / macOS / Linux — Sem instalar Node localmente)
-```bash
-docker compose up --build
-```
-
 Acesse também diretamente no navegador:
 - **Portal Web (3 Módulos)**: http://localhost:3001
 - **Documentação OpenAPI / Swagger**: http://localhost:3001/api/docs
