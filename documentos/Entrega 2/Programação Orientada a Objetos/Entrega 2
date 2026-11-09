@@ -1,0 +1,4 @@
+- **Entrega de Programação Orientada a Objetos (POO)**:
+  - Implementada em [`backend/src/domain/Entities.js`](./backend/src/domain/Entities.js) com Abstração, Encapsulamento (campos privados `#`), Herança e Polimorfismo (`Usuario` $\rightarrow$ `Administrador`, `Professor`, `Responsavel`), Factory Pattern (`FabricaUsuario`), além das entidades ricas `PeriodoBimestral` e `AcompanhamentoBimestral` (máquina de estados `RASCUNHO` $\rightarrow$ `ENVIADO` $\rightarrow$ `DEVOLVIDO` / `PUBLICADO`).
+
+O código esta disponivel na pasta src na primeira página deste repositório
