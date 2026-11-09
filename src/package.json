@@ -1,0 +1,15 @@
+{
+  "name": "edull-kfka-pi-ads2",
+  "version": "1.0.0",
+  "description": "EduLL-Kfka - Sistema Integrado de Acompanhamento Acadêmico Bimestral - Ensino Fundamental (PI ADS.2)",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix frontend run build",
+    "start": "node backend/src/server.js",
+    "desktop": "node iniciar-desktop.js",
+    "dev:backend": "node --watch backend/src/server.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "node backend/src/database/seed.js",
+    "test": "node --test backend/tests/api.test.js"
+  }
+}
