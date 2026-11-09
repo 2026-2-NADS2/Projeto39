@@ -10,16 +10,11 @@
 
 ## Integrantes: <a>Daniel Mendonça Sulato<a>, <a>Felipe Okada Coleto</a>, <a>Pedro Henrique Costa Barros Santos</a> e <a>Vitor Ordnois Henrique</a>
 
-## Professores Orientadores: <a>Eduardo Savino Gomes</a>, <a>Francisco de Souza Escobar</a>, <a>Ronaldo Araujo Pinto</a>, <a>Adriano Felix Valente</a>, <a>Robson deOliveira Cardoso</a> e <a>José Carlos Buesso Junior</a>
+## Professores Orientadores: <a>Eduardo Savino Gomes</a>, <a>Francisco de Souza Escobar</a>, <a>Ronaldo Araujo Pinto</a>, <a>Adriano Felix Valente</a>, <a>Robson de Oliveira Cardoso</a> e <a>José Carlos Buesso Junior</a>
 
 ## Descrição
 
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="Projeto Integrador ADS2" border="0">
-</p>
-
-
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+Aplicação web responsiva, segura e integrada para registrar, revisar, publicar e acompanhar informações acadêmicas bimestrais de alunos do Ensino Fundamental, fortalecendo a comunicação entre **Administração Escolar**, **Professores** e **Pais/Responsáveis**.
 <br><br>
 Projeto Integrador do 2º semestre do curso de Análise e Desenvolvimento da FECAP.
 <br><br>
@@ -31,37 +26,32 @@ Grupo: Borracharia Laranja Lima!
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
+  &emsp;|-->Entrega 1<br>
+  &emsp;&emsp;|-->Banco de Dados<br>
+  &emsp;&emsp;|-->Desenvolvimento Web Fullstack<br>
+  &emsp;&emsp;|-->Design de Interface Digital<br>
+  &emsp;&emsp;|-->Estrutura de Dados<br>
+  &emsp;&emsp;|-->Programação Orientada a Objetos<br>
+  &emsp;|-->Entrega 2<br>
+  &emsp;&emsp;|-->Banco de Dados<br>
+  &emsp;&emsp;|-->Desenvolvimento Web Fullstack<br>
+  &emsp;&emsp;|-->Design de Interface Digital<br>
+  &emsp;&emsp;|-->Estrutura de Dados<br>
+  &emsp;&emsp;|-->Programação Orientada a Objetos<br>
+  &emsp;|Declaração de Uso de IA.md<br>
 |-->imagens<br>
 |-->src<br>
+  &emsp;|-->EduLL-Kfka.app<br>
   &emsp;|-->Backend<br>
   &emsp;|-->Frontend<br>
 |readme.md<br>
 
-## 🛠 KFKA-Plataforma de Acompanhamento Escolar
+## 🛠 EduLL-KFKA: Plataforma de Acompanhamento Escolar
 
 <b>Informação1:</b>
 
-Informações e informações,
-Mais informações.
-
-```sh
-Código relevante
-```
-
-<b>Informações2:</b>
-
-Informações e informações,
-Mais informações.
-
-```sh
-Código pertinente
-```
+ O EduLL-Kfka é uma aplicação web responsiva voltada para escolas de Ensino Fundamental cujo objetivo é estruturar o acompanhamento acadêmico bimestral dos alunos e fortalecer a comunicação entre corpo docente, gestão escolar e famílias. 
+ O sistema opera em três módulos integrados com controle de acesso por perfil: o Professor registra, dentro do período de digitação autorizado, a média bimestral, a frequência, o parecer descritivo qualitativo e múltiplas tags pedagógicas de cada aluno, podendo salvar rascunhos e encaminhá-los para validação; o Administrador Escolar gerencia os cadastros, vínculos e períodos letivos, revisa os acompanhamentos recebidos — podendo alterá-los com rastreabilidade completa de histórico, devolvê-los para ajustes ou publicá-los — e exporta relatórios gerenciais para Excel; e o Pai/Responsável consulta exclusivamente os relatórios já publicados dos alunos sob sua responsabilidade, emite o boletim em PDF, registra ciência de leitura e envia observações diretamente à escola.
 
 <b>HTML:</b>
 
