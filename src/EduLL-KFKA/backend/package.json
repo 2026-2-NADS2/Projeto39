@@ -1,0 +1,21 @@
+{
+  "name": "edubimestre-backend",
+  "version": "1.0.0",
+  "description": "Backend API RESTful com POO, Estruturas de Dados e SQLite para o Acompanhamento Acadêmico Bimestral",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/database/seed.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "edull-kfka-pi-ads2": "file:..",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1",
+    "xlsx": "^0.18.5"
+  }
+}
